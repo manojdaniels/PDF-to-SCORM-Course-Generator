@@ -34,7 +34,39 @@
 
 ## 📦 Installation
 
+
+⚙️ System Requirements
+| Component | Version                   |
+| --------- | ------------------------- |
+| Python    | 3.9+                      |
+| Flask     | 2.2.2                     |
+| pdf2image | 1.16.3                    |
+| Pillow    | 10.0.0                    |
+| Poppler   | Installed & added to PATH |
+
+📸 Screenshots / Demo
+
+- Add demo screenshots or GIFs showing:
+- File upload
+- Conversion progress
+- Download of the SCORM package
+
+🧠 How It Works
+
+- Upload a .pdf file using the web interface.
+- The backend converts each page to .png images using pdf2image.
+- A standard SCORM manifest file (imsmanifest.xml) is generated dynamically.
+- The final SCORM-compliant ZIP file is returned as a download.
+
+
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/ManojDaniels/PDF-to-SCORM-Course-Generator.git
 cd PDF-to-SCORM-Course-Generator
+
+📸 Screenshots
+
+
+👨‍💻 Developed By
+Manoj Daniel
+🧑‍💻 GitHub
