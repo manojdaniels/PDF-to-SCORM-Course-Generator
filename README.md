@@ -44,12 +44,10 @@
 | Pillow    | 10.0.0                    |
 | Poppler   | Installed & added to PATH |
 
-📸 Screenshots / Demo
+## 🖼️ Project Screenshots
 
-- Add demo screenshots or GIFs showing:
-- File upload
-- Conversion progress
-- Download of the SCORM package
+### 1️⃣ Cover Image
+![Cover Image](screenshots/PDF-SCORM-Course-Generator.png)
 
 🧠 How It Works
 
