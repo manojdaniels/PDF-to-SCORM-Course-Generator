@@ -45,7 +45,6 @@
 | Poppler   | Installed & added to PATH |
 
 ## 🖼️ Project Screenshots
-
 ### 1️⃣ Cover Image
 ![Cover Image](screenshots/PDF-SCORM-Course-Generator.png)
 
@@ -61,8 +60,7 @@
 ```bash
 git clone https://github.com/ManojDaniels/PDF-to-SCORM-Course-Generator.git
 cd PDF-to-SCORM-Course-Generator
-
-📸 Screenshots
+python app.py [For Web application]
 
 
 👨‍💻 Developed By
