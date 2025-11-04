@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF ➜ SCORM Course Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <h2>📚 PDF ➜ SCORM Course Generator</h2>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card upload-card">
+        <h3>Upload PDF File</h3>
+        <p>Select a PDF document to convert into a SCORM-compliant course package.</p>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/convert">
+          <input type="file" name="pdf_file" accept=".pdf" required />
+          <button type="submit" class="btn-primary">Generate SCORM Package</button>
+        </form>
+        <div id="progress" class="hidden">
+          <p>⏳ Processing your file...</p>
+        </div>
+      </div>
+
+      <div class="card output-card" id="outputCard" style="display:none;">
+        <h3>Conversion Summary</h3>
+        <ul id="summaryList"></ul>
+        <a href="#" id="downloadLink" class="btn-success" download>Download SCORM Package</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Developed by <a href="https://github.com/ManojDaniels" target="_blank">Manoj Daniel</a> © 2025</p>
+  </footer>
+
+  <script>
+  const form = document.getElementById('uploadForm');
+  const progress = document.getElementById('progress');
+  const outputCard = document.getElementById('outputCard');
+  const summaryList = document.getElementById('summaryList');
+  const downloadLink = document.getElementById('downloadLink');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    progress.classList.remove('hidden');
+    outputCard.style.display = 'none';
+    summaryList.innerHTML = '';
+    const formData = new FormData(form);
+
+    const response = await fetch('/convert', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+    progress.classList.add('hidden');
+    outputCard.style.display = 'block';
+    data.summary.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = '✅ ' + item;
+      summaryList.appendChild(li);
+    });
+    downloadLink.href = data.download_url;
+  });
+  </script>
+</body>
+</html>

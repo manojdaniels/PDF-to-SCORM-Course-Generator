@@ -1,0 +1,83 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F6F8FA;
+  margin: 0;
+  padding: 0;
+  color: #1E293B;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #007BFF, #00B4D8);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-success {
+  background: #28A745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  color: #6B7280;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-top: 1px solid #E5E7EB;
+}
